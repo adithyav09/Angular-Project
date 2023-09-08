@@ -23,3 +23,9 @@ Updating the CLI
 npm cache verify 
 
 [sudo] npm install -g @angular/cli 
+
+## Project Setup and First App
+
+- Need NodeJS to bundle and optimize the project (NPM)
+
+``` npm install -g @angular/cli@latest ```
