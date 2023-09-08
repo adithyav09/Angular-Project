@@ -28,4 +28,13 @@ npm cache verify
 
 - Need NodeJS to bundle and optimize the project (NPM)
 
-``` npm install -g @angular/cli@latest ```
+- Installing Angular (use sudo for mac or linux)
+```[sudo] npm install -g @angular/cli@latest ```
+
+- Creating a new Angular App
+```ng new my-first-app --no-strict```
+
+- Run Angular App
+```ng serve```
+
+## Editing the First App
