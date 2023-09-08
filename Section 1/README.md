@@ -14,15 +14,11 @@ Go to nodejs.org and download the latest version - uninstall (all) installed ver
 
 Updating npm:
 
-Run [sudo] npm install -g npm  (sudo  is only required on Mac/ Linux)
+```Run [sudo] npm install -g npm  (sudo  is only required on Mac/ Linux)```
 
 Updating the CLI
 
-[sudo] npm uninstall -g angular-cli @angular/cli 
-
-npm cache verify 
-
-[sudo] npm install -g @angular/cli 
+```[sudo] npm uninstall -g angular-cli @angular/cli ```
 
 ## Project Setup and First App
 
