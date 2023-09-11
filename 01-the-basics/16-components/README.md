@@ -89,3 +89,19 @@ instead of
 ```
 
 which will populate the __servers__ component instead of __server__
+
+## Working with Component Templates
+
+change ```templateURL``` to ```template``` in ```servers.component.ts``` and use __backticks__ to define multi-line template:
+
+```typescript
+@Component({
+  // selector: '[app-servers]',
+  // selector: '.app-servers',
+  selector: 'app-servers',
+  template: `
+    <app-server></app-server>
+    <app-server></app-server>`,
+  styleUrls: ['./servers.component.css']
+})
+```
