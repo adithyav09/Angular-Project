@@ -6,11 +6,11 @@ Creating a new component
 - create a new folder (server) under app
 - Within ```Server``` create a ```server.component.ts``` file.
 
-- Name the file after `ComponentNameComponent`
-- Add class decorator
+- Name the file after ```_ComponentName_Component```
+- Add a class decorator
 - selctor should be used with the prefix ```app-```
 - create a ```server.compoment.html```
-- point the ```./server.component.html``` by assigning it to ```templateURL```
+- point the ```./server.component.html``` by assigning it to ```templateURL``` in ```server.component.ts```
 
 ```typescript
 import { Component } from '@angular/core';
