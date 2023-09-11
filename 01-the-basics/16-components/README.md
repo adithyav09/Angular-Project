@@ -23,3 +23,16 @@ export class SeverComponent {
 
 }
 ```
+
+## Role of App Module and Component Declaration
+
+Angular uses modules to bundle components into packages
+
+- Add ```ServerCompoment``` to the ```declarations``` under ```NgModule```
+
+- Also need to import the ```ServerComponent```
+```typescript
+import {ServerComponent} from './server/server.component';
+```
+
+
