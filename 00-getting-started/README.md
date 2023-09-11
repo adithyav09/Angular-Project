@@ -60,3 +60,8 @@ Updating the CLI
 ## What is TypeScript?
 - TypeScript is a superset to JavaScript (More features than vanilla JS)
 - TypeScript gets compiled into JavaScript
+
+## A Basic Project Setup using Bootstrap for Styling
+- CD into the project-template folder is the Angular App 
+- install bootstrap (if not already done so) using ```npm install --save bootstrap@3```
+- in `angular.json` under `styles` add ```"node_modules/bootstrap/dist/css/bootstrap.min.css"```
