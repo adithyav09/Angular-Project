@@ -46,7 +46,7 @@ import {ServerComponent} from './server/server.component';
 
 ## Creating Components with CLI & Nesting Components
 
-```ng generate component servers``` or ```ng g c servers```creates a new component called servers automatically
+```ng generate component servers``` or ```ng g c servers```creates a new component called __servers__ automatically
 
 - four new files will generate one ```html, css, ts, spec.ts```
 
@@ -87,3 +87,5 @@ instead of
 ```html
 <app-server></app-server>
 ```
+
+which will populate the __servers__ component instead of __server__
