@@ -56,3 +56,7 @@ Updating the CLI
 - Do the Course Project
 - Ask in Q&A
 - also answer in the Q&A
+
+## What is TypeScript?
+- TypeScript is a superset to JavaScript (More features than vanilla JS)
+- TypeScript gets compiled into JavaScript
