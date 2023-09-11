@@ -34,3 +34,25 @@ Updating the CLI
 ```ng serve```
 
 ## Editing the First App
+## Course Structure
+- Getting Started
+- The Basics
+- Components & Databinding
+- Directives
+- Services and Dependency Injection
+- Routing
+- Observables
+- Forms
+- Pipes
+- Http
+- Authentication
+- Optimizations and NgModules
+- Deployment
+- Animations and Testing
+
+## How to get the Most out of the Course
+- Watch the videos
+- Do the Assignments
+- Do the Course Project
+- Ask in Q&A
+- also answer in the Q&A
