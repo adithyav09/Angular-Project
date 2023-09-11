@@ -30,7 +30,8 @@ Angular uses modules to bundle components into packages
 
 - Add ```ServerCompoment``` to the ```declarations``` under ```NgModule```
 
-- Also need to import the ```ServerComponent```
+- Also need to import the ```ServerComponent``` without the extension as such:
+
 ```typescript
 import {ServerComponent} from './server/server.component';
 ```
