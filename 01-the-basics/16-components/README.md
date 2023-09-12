@@ -146,7 +146,7 @@ To implement, must use as such with a `div` example:
 <div app-servers></div>
 ```
 
-To select by class using `.` as shown below:
+To select by class using `.` as shown below```app.component.html```:
 ```typescript
 @Component({
   selector: '.app-servers',
@@ -157,7 +157,7 @@ To select by class using `.` as shown below:
 })
 ```
 
-and to access the class using a `div`:
+and to access the class using a `div` in ```app.component.html```:
 ```html
 <div class="app-servers"></div>
 ```
