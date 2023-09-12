@@ -141,12 +141,12 @@ The select by attribute using square brackets as shown below:
 })
 ```
 
-To implement, must use as such with a `div` example:
+To implement, must use as such with a `div` example in ```app.component.html```:
 ```html
 <div app-servers></div>
 ```
 
-To select by class using `.` as shown below```app.component.html```:
+To select by class using `.` as shown below:
 ```typescript
 @Component({
   selector: '.app-servers',
