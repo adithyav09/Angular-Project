@@ -30,6 +30,21 @@ Angular uses modules to bundle components into packages
 
 - Add ```ServerCompoment``` to the ```declarations``` under ```NgModule```
 
+```typescript
+@NgModule({
+  declarations: [
+    AppComponent,
+    ServerComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+```
+
 - Also need to import the ```ServerComponent``` without the extension added (webpack automatically installs extension):
 
 ```typescript
