@@ -105,3 +105,23 @@ change ```templateURL``` to ```template``` in ```servers.component.ts``` and use
   styleUrls: ['./servers.component.css']
 })
 ```
+
+## Working with Component Styles
+Create ```div``` using bootstrap in ```app.component.html```:
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+    </div>
+  </div>
+</div>
+```
+
+and style ```app.component.css``` to style ```app.component.html```:
+
+```css
+h3 {
+  color: darkblue;
+}
+```
