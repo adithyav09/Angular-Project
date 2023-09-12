@@ -125,3 +125,39 @@ h3 {
   color: darkblue;
 }
 ```
+
+or you can add the code above to ```app.component.ts``` putting it in an array using the styles property instead of ```styleUrls```
+
+
+## Component Selector
+The select by attribute using square brackets as shown below:
+```typescript
+@Component({
+  selector: '[app-servers]',
+  template: `
+    <app-server></app-server>
+    <app-server></app-server>`,
+  styleUrls: ['./servers.component.css']
+})
+```
+
+To implement, must use as such with a `div` example:
+```html
+<div app-servers></div>
+```
+
+To select by class using `.` as shown below:
+```typescript
+@Component({
+  selector: '.app-servers',
+  template: `
+    <app-server></app-server>
+    <app-server></app-server>`,
+  styleUrls: ['./servers.component.css']
+})
+```
+
+and to access the class using a `div`:
+```html
+<div class="app-servers"></div>
+```
