@@ -113,14 +113,20 @@ export class ServersComponent implements OnInit {
     }
     ngOnInit() {
     }
-    
+
     onCreateServer() {
         this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
     }
 }
- 
 ```
+#### Bindable Properties and Events
+How do you know to which Properties or Events of HTML Elements you may bind? You can basically bind to all Properties and Events - a good idea is to ```console.log()```  the element you're interested in to see which properties and events it offers.
 
-combination of both(<->):
+Important: For events, you don't bind to onclick but only to click (=> (click)).
+
+The MDN (Mozilla Developer Network) offers nice lists of all properties and events of the element you're interested in. Googling for YOUR_ELEMENT properties  or YOUR_ELEMENT events  should yield nice results.
+
+
+## combination of both(<->):
 - Two-Way-Binding 
 
