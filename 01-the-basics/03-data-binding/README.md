@@ -64,7 +64,7 @@ export class ServersComponent implements OnInit {
 ```
 ### Property Binding vs String interpolation
 
-Can use property binding instead of string interpolation below:
+Can use property binding instead of string interpolation below in ```servers.component.ts```:
 
 ```typescript
 <button
@@ -85,6 +85,41 @@ If you want to change some property (html element, directive, or component) use 
 
 ## React to (user) Events (<-):
 - event binding
+
+Code below belongs in ```servers.component.ts```:
+
+```html
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<!--<p [innerText]="allowNewServer"></p>-->
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>
+```
+
+In ```servers.component.ts```:
+
+```typescript
+export class ServersComponent implements OnInit {
+  allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
+  
+    constructor() {
+        setTimeout(() => {
+        this.allowNewServer = true;
+        }, 2000);
+    }
+    ngOnInit() {
+    }
+    
+    onCreateServer() {
+        this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
+    }
+}
+ 
+```
 
 combination of both(<->):
 - Two-Way-Binding 
