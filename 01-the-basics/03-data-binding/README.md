@@ -130,3 +130,20 @@ The MDN (Mozilla Developer Network) offers nice lists of all properties and even
 ## combination of both(<->):
 - Two-Way-Binding 
 
+The ```($event)```
+
+```html
+<label>Server Name</label>
+<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)">
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<!--<p [innerText]="allowNewServer"></p>-->
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>
+```
