@@ -4,12 +4,12 @@ Databinding = Communication
 
 TypeScript code -> TemplateHTML
 
-Output Data (->):
+## Output Data (->):
 - string interpolation
 - property binding
 
 
-## String interpolation
+### String interpolation
 in ```server.component.html``` add
 
 ```html
@@ -31,22 +31,59 @@ export class ServerComponent {
     }
 ```
 
-## Property Binding
+### Property Binding
+
+In ```servers.component.html``` write where __disabled__ should be in square brackets:
+
 ```html
 <button class="btn btn-primary"
-disabled>Add Server</button>
+[disabled]="!allowNewServer">Add Server</button>
 <app-server></app-server>
 <app-server></app-server>
 ```
+
+Also add code below in the ```severs.component.ts``` to make button available after 2 seconds:
 
 ```typescript
 @Component({
   templateUrl: './servers.component.html',
 })
+
+export class ServersComponent implements OnInit {
+  allowNewServer = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
+
+  ngOnInit() {
+  }
+}
+```
+### Property Binding vs String interpolation
+
+Can use property binding instead of string interpolation below:
+
+```typescript
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<p [innerText]="allowNewServer"></p>
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>
 ```
 
+**Note**: Don't mix property binding and string interpolation.
 
-React to (user) Events (<-):
+If you want to output something in your template use string interpolation.
+
+If you want to change some property (html element, directive, or component) use property binding.
+
+## React to (user) Events (<-):
 - event binding
 
 combination of both(<->):
