@@ -127,10 +127,7 @@ __Important__: For events, you don't bind to onclick but only to click (=> (clic
 The MDN (Mozilla Developer Network) offers nice lists of all properties and events of the element you're interested in. Googling for ```YOUR_ELEMENT properties```  or ```YOUR_ELEMENT events```  should yield nice results.
 
 
-## combination of both(<->):
-- Two-Way-Binding 
-
-The ```($event)```
+The ```($event)``` is reserved varaiable name
 
 ```html
 <label>Server Name</label>
@@ -138,6 +135,75 @@ The ```($event)```
   type="text"
   class="form-control"
   (input)="onUpdateServerName($event)">
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<!--<p [innerText]="allowNewServer"></p>-->
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>
+```
+
+and add method to ```servers.component.ts``` and test in console using "Test" which will fire 4 logs due to 4 characters long.
+
+```typescript
+export class ServersComponent implements OnInit {
+  allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
+  serverName = 'Testserver';
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
+
+  ngOnInit() {
+  }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
+  }
+
+  onUpdateServerName(event: Event) {
+    
+    // html input element important note
+    this.serverName = (<HTMLInputElement>event.target).value;
+  }
+}
+
+```
+
+input and click are default events provided by the DOM and ship data when they are fired
+
+## Combination of both(<->):
+- Two-Way-Binding 
+
+#### Important: FormsModule is Required for Two-Way-Binding!
+
+__Important__: For Two-Way-Binding (covered in the next lecture) to work, you need to enable the ```ngModel```  directive. This is done by adding the ```FormsModule```  to the ```imports[]``` array in the AppModule.```
+
+You then also need to add the import from ```@angular/forms```  in the app.module.ts file:
+
+```import { FormsModule } from '@angular/forms';```
+
+
+Both square brackets and parentheses used for two-way binding and a special _directive_. 
+
+__Important__: To be able to use 'ngModel', the FormsModule (from @angular/forms) needs to be added to your imports[] array in the AppModule (should be there by default in a CLI project)
+
+```html
+<label>Server Name</label>
+<!--<input-->
+  <!--type="text"-->
+  <!--class="form-control"-->
+  <!--(input)="onUpdateServerName($event)">-->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
