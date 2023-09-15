@@ -163,7 +163,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
-    this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
+    this.serverCreationStatus = 'Server was created!';
   }
 
   onUpdateServerName(event: Event) {
@@ -212,4 +212,33 @@ __Important__: To be able to use 'ngModel', the FormsModule (from @angular/forms
 <p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
+```
+
+```html
+<label>Server Name</label>
+<!--<input-->
+  <!--type="text"-->
+  <!--class="form-control"-->
+  <!--(input)="onUpdateServerName($event)">-->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<!-- <p>{{ serverName }}</p> -->
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<!--<p [innerText]="allowNewServer"></p>-->
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>
+```
+
+add ```this.serverName``` to the ```onCreateServer``` function.
+
+```typescript
+onCreateServer() {
+    this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
+  }
 ```
