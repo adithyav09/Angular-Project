@@ -22,13 +22,13 @@ and add this to ```sever.componenet.ts```
 
 ```typescript
 export class ServerComponent {
-    serverID: number = 10;
-    serverStatus: string = 'offline';
+  serverID: number = 10;
+  serverStatus: string = 'offline';
+  
+  getSeverStatus() {
+    return this.getServerStatus;
+  }
 }
-
-    getSeverStatus() {
-        return this.getServerStatus;
-    }
 ```
 
 ### Property Binding
